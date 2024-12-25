@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice to Text with Auto Language Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        #text-container {
+            border: 2px solid #ccc;
+            width: 600px;
+            margin: 50px auto;
+            height: 400px;
+            overflow-y: scroll;
+            background: #fff;
+            padding: 10px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            background: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:disabled {
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Voice to Text with Auto Language Detection</h1>
+    <div id="text-container"></div>
+
+    <button id="start-btn">Start Listening</button>
+    <button id="stop-btn" disabled>Stop Listening</button>
+    <button onclick="playVoice('male')">Play Male Voice</button>
+    <button onclick="playVoice('female')">Play Female Voice</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/franc-min"></script> <!-- Include the franc-min language detection library -->
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
